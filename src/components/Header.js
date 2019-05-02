@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Header(props) {
   // Destructing props
@@ -9,5 +10,13 @@ function Header(props) {
     </div>
   );
 }
+
+Header.defaultProps = {
+  heading: "My App"
+};
+
+Header.propTypes = {
+  heading: PropTypes.string.isRequired
+};
 
 export default Header;
