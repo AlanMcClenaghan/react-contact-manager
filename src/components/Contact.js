@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./contact.css";
 
 class Contact extends Component {
   // PropTypes as static method in class
@@ -14,11 +13,11 @@ class Contact extends Component {
     // Destructing this.props
     const { name, email, phone } = this.props;
     return (
-      <div>
-        <h4 style={headingStyling}>{name}</h4>
-        <ul>
-          <li>Email: {email}</li>
-          <li>Phone: {phone}</li>
+      <div className="card card-body mb-3">
+        <h4>{name}</h4>
+        <ul className="list-group">
+          <li className="list-group-item">Email: {email}</li>
+          <li className="list-group-item">Phone: {phone}</li>
         </ul>
       </div>
     );
@@ -30,12 +29,6 @@ Contact.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired
-};
-
-const headingStyling = {
-  color: "blue",
-  fontSize: "20px",
-  textTransform: "uppercase"
 };
 
 export default Contact;
