@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./contact.css";
 
 class Contact extends Component {
   // PropTypes as static method in class
@@ -14,7 +15,7 @@ class Contact extends Component {
     const { name, email, phone } = this.props;
     return (
       <div>
-        <h4>{name}</h4>
+        <h4 style={headingStyling}>{name}</h4>
         <ul>
           <li>Email: {email}</li>
           <li>Phone: {phone}</li>
@@ -29,6 +30,12 @@ Contact.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired
+};
+
+const headingStyling = {
+  color: "blue",
+  fontSize: "20px",
+  textTransform: "uppercase"
 };
 
 export default Contact;
