@@ -1,9 +1,11 @@
 import React from "react";
 
-function Header() {
+function Header(props) {
+  // Destructing props
+  const { heading } = props;
   return (
     <div>
-      <h1>Contact Manager</h1>
+      <h1>{heading}</h1>
     </div>
   );
 }
